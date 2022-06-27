@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: dgs-example-java
+server:
+  port: 8081
+---
+spring:
+  config:
+    activate:
+      on-profile: local
+  output:
+    ansi:
+      enabled: always
+  mvc:
+    async:
+      request-timeout: 45000
+logging:
+  level:
+    com:
+      example: DEBUG
+      netflix:
+        graphql:
+          dgs: TRACE
+    web: DEBUG
+
