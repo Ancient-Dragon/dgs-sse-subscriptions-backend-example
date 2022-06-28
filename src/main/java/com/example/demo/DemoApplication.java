@@ -2,6 +2,9 @@ package com.example.demo;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.Bean;
+import org.springframework.web.servlet.config.annotation.CorsRegistry;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 @SpringBootApplication
 public class DemoApplication {
@@ -10,23 +13,4 @@ public class DemoApplication {
 		SpringApplication.run(DemoApplication.class, args);
 	}
 
-	/**
-	 * Below is an example of using a PreparsedDocumentProvider.
-	 * Uncomment to enable
-	 */
-//	@Configuration
-//	static class PreparsedDocumentProviderConfig {
-//
-//		private final Cache<String, PreparsedDocumentEntry> cache = Caffeine.newBuilder().maximumSize(250)
-//				.expireAfterAccess(5, TimeUnit.MINUTES).recordStats().build();
-//
-//
-//		@Bean
-//		public PreparsedDocumentProvider preparsedDocumentProvider() {
-//			return (executionInput, parseAndValidateFunction) -> {
-//				Function<String, PreparsedDocumentEntry> mapCompute = key -> parseAndValidateFunction.apply(executionInput);
-//				return cache.get(executionInput.getQuery(), mapCompute);
-//			};
-//		}
-//	}
 }

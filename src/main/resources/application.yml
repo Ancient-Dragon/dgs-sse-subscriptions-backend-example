@@ -3,6 +3,14 @@ spring:
     name: dgs-example-java
 server:
   port: 8081
+  http2:
+      enabled: true
+  ssl:
+    key-store-type: PKCS12
+    key-store: classpath:keystore/baeldung.p12
+    key-store-password: password
+    key-alias: baeldung
+    enabled: true
 ---
 spring:
   config:
@@ -14,12 +22,3 @@ spring:
   mvc:
     async:
       request-timeout: 45000
-logging:
-  level:
-    com:
-      example: DEBUG
-      netflix:
-        graphql:
-          dgs: TRACE
-    web: DEBUG
-
