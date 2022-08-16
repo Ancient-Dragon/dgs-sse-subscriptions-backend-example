@@ -47,7 +47,7 @@ dependencies {
     implementation(platform("com.netflix.graphql.dgs:graphql-dgs-platform-dependencies:latest.release"))
     implementation("com.netflix.graphql.dgs:graphql-dgs-spring-boot-starter")
     implementation("com.netflix.graphql.dgs:graphql-dgs-extended-scalars")
-    implementation("com.netflix.graphql.dgs:graphql-dgs-subscriptions-sse-autoconfigure:5.1.0-SNAPSHOT")
+    implementation("com.netflix.graphql.dgs:graphql-dgs-subscriptions-sse-autoconfigure:5.1.1")
     implementation("org.springframework.boot:spring-boot-starter-web")
     implementation("com.github.javafaker:javafaker:1.+")
     implementation("com.github.ben-manes.caffeine:caffeine")
