@@ -44,7 +44,7 @@ repositories {
 }
 
 dependencies {
-    implementation(platform("com.netflix.graphql.dgs:graphql-dgs-platform-dependencies:latest.release"))
+    implementation(platform("com.netflix.graphql.dgs:graphql-dgs-platform-dependencies:5.2.1"))
     implementation("com.netflix.graphql.dgs:graphql-dgs-spring-boot-starter")
     implementation("com.netflix.graphql.dgs:graphql-dgs-extended-scalars")
     implementation("com.netflix.graphql.dgs:graphql-dgs-subscriptions-sse-autoconfigure:5.1.0-SNAPSHOT")
